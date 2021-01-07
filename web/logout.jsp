@@ -4,7 +4,7 @@
     String key = request.getParameter("key");
     if(sess.getAttribute("log_key").equals(key)){
         sess.invalidate();
-        out.print("<script>history.back();</script>");
+        out.print("<script>location.reload(true);</script>");
     }else{
         out.print("Invalid Attempt");
     }
